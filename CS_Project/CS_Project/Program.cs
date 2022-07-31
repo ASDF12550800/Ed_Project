@@ -6,15 +6,24 @@ namespace CS_Project
     { 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World\n\n");
+            MakeStar();
+        }
 
-            int i1 = 3;
-            string s1 = "Hi";
+        // Make Star //
+        static void MakeStar() {
+            // Graphic //
+            string Graphic = "";
+            
+            // Star Setting //
+            for (int i = 0;  i < 5; i++) {
+                for (int j = 0; j < 5 - i; j++) Graphic += "*"; // Fi
+                for (int j = 0; j < 10 - (5 - i) * 2; j++) Graphic += " "; // Se
+                for (int j = 0; j < 5 - i; j++) Graphic += "*"; // Th
+                Graphic += "\n"; 
+            }
 
-            Console.WriteLine(i1 + " " + s1);
-            Console.WriteLine("{0} {1}", i1, s1);
-            Console.WriteLine($"{i1} {s1}");
-            Console.ReadKey();
+            // Draw //
+            Console.WriteLine(Graphic);
         }
     }
 }
